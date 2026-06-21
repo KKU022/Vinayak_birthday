@@ -10,22 +10,22 @@ const rnd = (a, b) => Math.random() * (b - a) + a;
    and decide short-clip (autoplay loop) vs long-clip (click to play)
 ------------------------------------------------------------------ */
 const VIDEO_EXT = /\.(mp4|webm|mov)$/i;
-function isVideoSrc(src) { return VIDEO_EXT.test(src || ''); }
+function isVideosrc(src) { return VIDEO_EXT.test(src || ''); }
 
 /* Short clips that should autoplay/muted/loop inline (≤10s sources) */
 const SHORT_CLIPS = new Set([
-  'videos/wa-clip.mp4',
-  'videos/priyanshi2.mp4',
-  'videos/v6.mp4',
-  'videos/v7.mp4',
-  'videos/vinayak4.mp4',
-  'videos/vinayak5.mp4',
+  'Videos/wa-clip.mp4',
+  'Videos/priyanshi2.mp4',
+  'Videos/v6.mp4',
+  'Videos/v7.mp4',
+  'Videos/vinayak4.mp4',
+  'Videos/vinayak5.mp4',
 ]);
 
 /* Builds the right <img> or <video> tag for any media source.
    className applies to the media element itself. */
 function mediaTag(src, alt, className) {
-  if (isVideoSrc(src)) {
+  if (isVideosrc(src)) {
     if (SHORT_CLIPS.has(src)) {
       return `<video class="${className}" src="${src}" autoplay muted loop playsinline aria-label="${alt}"></video>`;
     }
@@ -35,9 +35,9 @@ function mediaTag(src, alt, className) {
 }
 
 /* For elements where clicking should open a playable lightbox version
-   (used for longer videos so they're not stuck autoplaying tiny) */
+   (used for longer Videos so they're not stuck autoplaying tiny) */
 function lightboxMediaTag(src, alt) {
-  if (isVideoSrc(src)) {
+  if (isVideosrc(src)) {
     return `<video src="${src}" controls autoplay playsinline style="width:100%;border-radius:2px;background:#000;"></video>`;
   }
   return `<img id="lightbox-img" src="${src}" alt="${alt}">`;

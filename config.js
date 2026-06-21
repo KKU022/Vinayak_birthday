@@ -1,8 +1,8 @@
 /* ====================================================================
    THE VINAYAK FILES — CONFIGURATION  (PERSONALIZED — REAL ASSETS)
    ====================================================================
-   All photos and videos below point to the real files inside:
-   /photos  and  /videos
+   All photos and Videos below point to the real files inside:
+   /photos  and  /Videos
    v5.jpeg is the official dossier / hero photo.
    ==================================================================== */
 
@@ -31,7 +31,7 @@ const VINAYAK_CONFIG = {
 
   /* ------------------------------------------------------------------
      SECTION 1 — PHOTO WALL OF CHAOS
-     A non-sequential scrapbook mix of photos + short looping videos.
+     A non-sequential scrapbook mix of photos + short looping Videos.
      type: "photo" | "video"
   ------------------------------------------------------------------ */
   photoWall: [
@@ -154,7 +154,7 @@ const VINAYAK_CONFIG = {
   ],
 
   /* ------------------------------------------------------------------
-     SECTION 5 — MEMORY REEL (mix of photos + click-to-play videos)
+     SECTION 5 — MEMORY REEL (mix of photos + click-to-play Videos)
      type: "photo" | "video"
   ------------------------------------------------------------------ */
   reel: [
@@ -261,6 +261,6 @@ const VINAYAK_CONFIG = {
 
   /* The meaningful video shown right before the closing message,
      introduced with "One Last Piece Of Evidence..." */
-  finalVideo: "videos/vinayak1.mp4",
+  finalVideo: "Videos/vinayak1.mp4",
 
 };
