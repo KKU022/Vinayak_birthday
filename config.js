@@ -1,8 +1,8 @@
 /* ====================================================================
    THE VINAYAK FILES — CONFIGURATION  (PERSONALIZED — REAL ASSETS)
    ====================================================================
-   All photos and Videos below point to the real files inside:
-   /photos  and  /Videos
+   All Photos and Videos below point to the real files inside:
+   /Photos  and  /Videos
    v5.jpeg is the official dossier / hero photo.
    ==================================================================== */
 
@@ -20,7 +20,7 @@ const VINAYAK_CONFIG = {
   bootLines: [
     "ACCESSING CLASSIFIED RECORDS...",
     "Scanning friendship database... [OK]",
-    "Recovering embarrassing photos... [50 FOUND]",
+    "Recovering embarrassing Photos... [50 FOUND]",
     "Loading unforgettable memories...",
     "Compiling evidence...",
     "Cross-referencing chaos reports...",
@@ -31,7 +31,7 @@ const VINAYAK_CONFIG = {
 
   /* ------------------------------------------------------------------
      SECTION 1 — PHOTO WALL OF CHAOS
-     A non-sequential scrapbook mix of photos + short looping Videos.
+     A non-sequential scrapbook mix of Photos + short looping Videos.
      type: "photo" | "video"
   ------------------------------------------------------------------ */
   photoWall: [
@@ -154,7 +154,7 @@ const VINAYAK_CONFIG = {
   ],
 
   /* ------------------------------------------------------------------
-     SECTION 5 — MEMORY REEL (mix of photos + click-to-play Videos)
+     SECTION 5 — MEMORY REEL (mix of Photos + click-to-play Videos)
      type: "photo" | "video"
   ------------------------------------------------------------------ */
   reel: [

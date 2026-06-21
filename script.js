@@ -483,7 +483,7 @@ function buildRoast() {
 
 /* ---------------- FINAL SECTION ---------------- */
 function buildFinal() {
-  const wrap = $('final-photos');
+  const wrap = $('final-Photos');
   const positions = [
     { top: '10%', left: '8%' }, { top: '15%', left: '78%' },
     { top: '55%', left: '4%' }, { top: '65%', left: '85%' },

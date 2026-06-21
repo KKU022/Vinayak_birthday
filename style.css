@@ -817,7 +817,7 @@ button { font-family: inherit; cursor: pointer; }
   position: absolute; inset: 0;
   background: radial-gradient(ellipse at 50% 30%, rgba(179,58,46,.12), transparent 60%);
 }
-.final-photos {
+.final-Photos {
   position: absolute;
   inset: 0;
   z-index: 0;

@@ -1,196 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>THE VINAYAK FILES — Classified Birthday Dossier</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Caveat:wght@500;600;700&family=Special+Elite&family=Kalam:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>THE VINAYAK FILES — Classified Birthday Dossier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Caveat:wght@500;600;700&family=Special+Elite&family=Kalam:wght@400;700&family=Archivo+Black&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Grain overlay, runs the whole site -->
-<div class="grain-overlay"></div>
-<div id="cursor-stamp"></div>
+  <!-- Grain overlay, runs the whole site -->
+  <div class="grain-overlay"></div>
+  <div id="cursor-stamp"></div>
 
-<!-- ============================================================
+  <!-- ============================================================
      BOOT SEQUENCE
 ============================================================ -->
-<div id="boot-screen">
-  <div class="boot-terminal">
-    <div class="boot-line boot-header">█▓▒░ RESTRICTED ACCESS TERMINAL ░▒▓█</div>
-    <div id="boot-log"></div>
-    <div class="boot-cursor-line"><span class="boot-prompt">&gt;</span> <span id="boot-input-line"></span><span class="blinker">_</span></div>
+  <div id="boot-screen">
+    <div class="boot-terminal">
+      <div class="boot-line boot-header">█▓▒░ RESTRICTED ACCESS TERMINAL ░▒▓█</div>
+      <div id="boot-log"></div>
+      <div class="boot-cursor-line"><span class="boot-prompt">&gt;</span> <span id="boot-input-line"></span><span
+          class="blinker">_</span></div>
+    </div>
+    <button id="boot-skip">skip ⏭</button>
   </div>
-  <button id="boot-skip">skip ⏭</button>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      DOSSIER REVEAL (after boot)
 ============================================================ -->
-<div id="dossier-reveal" class="hidden-stage">
-  <div class="dossier-stamp">TOP SECRET</div>
-  <div class="dossier-card">
-    <div class="dossier-photo-wrap">
-      <img src="photos/vinayak5.jpeg" alt="Subject photo" class="dossier-photo">
-      <div class="dossier-photo-tag">SUBJECT PHOTO ON FILE</div>
+  <div id="dossier-reveal" class="hidden-stage">
+    <div class="dossier-stamp">TOP SECRET</div>
+    <div class="dossier-card">
+      <div class="dossier-photo-wrap">
+        <img src="Photos/vinayak5.jpeg" alt="Subject photo" class="dossier-photo">
+        <div class="dossier-photo-tag">SUBJECT PHOTO ON FILE</div>
+      </div>
+      <div class="dossier-rule"></div>
+      <h1 class="dossier-title">THE VINAYAK FILES</h1>
+      <div class="dossier-rule"></div>
+      <div class="dossier-row"><span>SUBJECT</span><strong>Vinayak Bhutra</strong></div>
+      <div class="dossier-row"><span>CLASSIFICATION</span><strong>Legendary Non-Human</strong></div>
+      <div class="dossier-row"><span>FRIENDSHIP STATUS</span><strong>Chaotic</strong></div>
+      <div class="dossier-row"><span>CHAOS RATING</span><strong>99%</strong></div>
+      <div class="dossier-row"><span>EDITION</span><strong>Birthday 2026 Special Release</strong></div>
+      <div class="dossier-rule"></div>
+      <button id="enter-btn" class="enter-btn">PRESS ENTER TO CONTINUE ▸</button>
     </div>
-    <div class="dossier-rule"></div>
-    <h1 class="dossier-title">THE VINAYAK FILES</h1>
-    <div class="dossier-rule"></div>
-    <div class="dossier-row"><span>SUBJECT</span><strong>Vinayak Bhutra</strong></div>
-    <div class="dossier-row"><span>CLASSIFICATION</span><strong>Legendary Non-Human</strong></div>
-    <div class="dossier-row"><span>FRIENDSHIP STATUS</span><strong>Chaotic</strong></div>
-    <div class="dossier-row"><span>CHAOS RATING</span><strong>99%</strong></div>
-    <div class="dossier-row"><span>EDITION</span><strong>Birthday 2026 Special Release</strong></div>
-    <div class="dossier-rule"></div>
-    <button id="enter-btn" class="enter-btn">PRESS ENTER TO CONTINUE ▸</button>
+    <div class="film-grain-flicker"></div>
   </div>
-  <div class="film-grain-flicker"></div>
-</div>
 
-<!-- ============================================================
+  <!-- ============================================================
      MAIN SITE
 ============================================================ -->
-<main id="main-site" class="hidden-stage">
+  <main id="main-site" class="hidden-stage">
 
-  <!-- Progress + nav -->
-  <div id="case-progress"><div id="case-progress-fill"></div></div>
-  <button id="sound-toggle" aria-label="Toggle sound">🔇</button>
-
-  <!-- ============== SECTION 0 : HERO TAPE TITLE ============== -->
-  <section class="sect" id="sect-hero">
-    <div class="corkboard-bg"></div>
-    <div class="hero-pinned-photo">
-      <img src="photos/vinayak5.jpeg" alt="Vinayak Bhutra — subject photo">
-      <div class="hero-pinned-pin"></div>
+    <!-- Progress + nav -->
+    <div id="case-progress">
+      <div id="case-progress-fill"></div>
     </div>
-    <div class="hero-tape-title">
-      <span class="tape tape-tl"></span>
-      <h1 class="hero-headline">CASE FILE:<br><span class="redact">VINAYAK BHUTRA</span></h1>
-      <p class="hero-sub">A chaotic, hilarious, deeply unhinged investigation into one legendary friendship.</p>
-      <div class="hero-scroll-cue">scroll to open the file ↓</div>
-    </div>
-  </section>
+    <button id="sound-toggle" aria-label="Toggle sound">🔇</button>
 
-  <!-- ============== SECTION 1 : PHOTO WALL OF CHAOS ============== -->
-  <section class="sect" id="sect-wall">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 01</span>PHOTO WALL OF CHAOS</h2>
-    <p class="sect-sub">40 unauthorized photographs. Tap any to enlarge. Handle with caution.</p>
-    <div id="photo-wall" class="photo-wall"></div>
-  </section>
-
-  <!-- ============== SECTION 2 : TIMELINE ============== -->
-  <section class="sect" id="sect-timeline">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 02</span>THE TIMELINE OF EVENTS</h2>
-    <p class="sect-sub">Drag sideways. Tap a milestone to relive it.</p>
-    <div id="timeline-track" class="timeline-track"></div>
-  </section>
-
-  <!-- ============== SECTION 3 : WRAPPED ============== -->
-  <section class="sect" id="sect-wrapped">
-    <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 03</span>VINAYAK, WRAPPED</h2>
-    <p class="sect-sub sect-sub-light">The data doesn't lie. Mostly.</p>
-    <div id="wrapped-grid" class="wrapped-grid"></div>
-  </section>
-
-  <!-- ============== SECTION 4 : EVIDENCE ROOM ============== -->
-  <section class="sect" id="sect-evidence">
-    <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 04</span>THE EVIDENCE ROOM</h2>
-    <p class="sect-sub sect-sub-light">Evidence That Vinayak Is Actually A Legend.</p>
-    <div id="evidence-board" class="evidence-board">
-      <svg id="string-svg" class="string-svg"></svg>
-      <div id="evidence-pins" class="evidence-pins"></div>
-    </div>
-  </section>
-
-  <!-- ============== SECTION 5 : MEMORY REEL ============== -->
-  <section class="sect" id="sect-reel">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 05</span>THE MEMORY REEL</h2>
-    <p class="sect-sub">Now screening. Tap any frame.</p>
-    <div class="projector-beam"></div>
-    <div id="film-reel" class="film-reel"></div>
-  </section>
-
-  <!-- ============== SECTION 6 : STAT CARDS ============== -->
-  <section class="sect" id="sect-cards">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 06</span>WHAT MAKES VINAYAK AWESOME</h2>
-    <p class="sect-sub">Collectible. Rare. Tap to flip.</p>
-    <div id="stat-cards" class="stat-cards"></div>
-  </section>
-
-  <!-- ============== SECTION 7 : REVIEWS ============== -->
-  <section class="sect" id="sect-reviews">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 07</span>VOICE OF THE PEOPLE</h2>
-    <p class="sect-sub">Verified* friends only. (*not verified at all)</p>
-    <div id="reviews-track" class="reviews-track"></div>
-  </section>
-
-  <!-- ============== SECTION 8 : INSIDE JOKES VAULT ============== -->
-  <section class="sect" id="sect-vault">
-    <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 08</span>THE INSIDE JOKES VAULT</h2>
-    <p class="sect-sub sect-sub-light">Authorized personnel only.</p>
-    <div id="vault-wrap" class="vault-wrap">
-      <div class="vault-door" id="vault-door">
-        <div class="vault-dial">
-          <div class="vault-dial-center" id="vault-dial-center">🔒</div>
-        </div>
-        <div class="vault-instruction">click the dial 3 times to crack it</div>
+    <!-- ============== SECTION 0 : HERO TAPE TITLE ============== -->
+    <section class="sect" id="sect-hero">
+      <div class="corkboard-bg"></div>
+      <div class="hero-pinned-photo">
+        <img src="Photos/vinayak5.jpeg" alt="Vinayak Bhutra — subject photo">
+        <div class="hero-pinned-pin"></div>
       </div>
-      <div class="vault-contents" id="vault-contents"></div>
+      <div class="hero-tape-title">
+        <span class="tape tape-tl"></span>
+        <h1 class="hero-headline">CASE FILE:<br><span class="redact">VINAYAK BHUTRA</span></h1>
+        <p class="hero-sub">A chaotic, hilarious, deeply unhinged investigation into one legendary friendship.</p>
+        <div class="hero-scroll-cue">scroll to open the file ↓</div>
+      </div>
+    </section>
+
+    <!-- ============== SECTION 1 : PHOTO WALL OF CHAOS ============== -->
+    <section class="sect" id="sect-wall">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 01</span>PHOTO WALL OF CHAOS</h2>
+      <p class="sect-sub">40 unauthorized photographs. Tap any to enlarge. Handle with caution.</p>
+      <div id="photo-wall" class="photo-wall"></div>
+    </section>
+
+    <!-- ============== SECTION 2 : TIMELINE ============== -->
+    <section class="sect" id="sect-timeline">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 02</span>THE TIMELINE OF EVENTS</h2>
+      <p class="sect-sub">Drag sideways. Tap a milestone to relive it.</p>
+      <div id="timeline-track" class="timeline-track"></div>
+    </section>
+
+    <!-- ============== SECTION 3 : WRAPPED ============== -->
+    <section class="sect" id="sect-wrapped">
+      <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 03</span>VINAYAK, WRAPPED</h2>
+      <p class="sect-sub sect-sub-light">The data doesn't lie. Mostly.</p>
+      <div id="wrapped-grid" class="wrapped-grid"></div>
+    </section>
+
+    <!-- ============== SECTION 4 : EVIDENCE ROOM ============== -->
+    <section class="sect" id="sect-evidence">
+      <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 04</span>THE EVIDENCE ROOM</h2>
+      <p class="sect-sub sect-sub-light">Evidence That Vinayak Is Actually A Legend.</p>
+      <div id="evidence-board" class="evidence-board">
+        <svg id="string-svg" class="string-svg"></svg>
+        <div id="evidence-pins" class="evidence-pins"></div>
+      </div>
+    </section>
+
+    <!-- ============== SECTION 5 : MEMORY REEL ============== -->
+    <section class="sect" id="sect-reel">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 05</span>THE MEMORY REEL</h2>
+      <p class="sect-sub">Now screening. Tap any frame.</p>
+      <div class="projector-beam"></div>
+      <div id="film-reel" class="film-reel"></div>
+    </section>
+
+    <!-- ============== SECTION 6 : STAT CARDS ============== -->
+    <section class="sect" id="sect-cards">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 06</span>WHAT MAKES VINAYAK AWESOME</h2>
+      <p class="sect-sub">Collectible. Rare. Tap to flip.</p>
+      <div id="stat-cards" class="stat-cards"></div>
+    </section>
+
+    <!-- ============== SECTION 7 : REVIEWS ============== -->
+    <section class="sect" id="sect-reviews">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 07</span>VOICE OF THE PEOPLE</h2>
+      <p class="sect-sub">Verified* friends only. (*not verified at all)</p>
+      <div id="reviews-track" class="reviews-track"></div>
+    </section>
+
+    <!-- ============== SECTION 8 : INSIDE JOKES VAULT ============== -->
+    <section class="sect" id="sect-vault">
+      <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 08</span>THE INSIDE JOKES VAULT</h2>
+      <p class="sect-sub sect-sub-light">Authorized personnel only.</p>
+      <div id="vault-wrap" class="vault-wrap">
+        <div class="vault-door" id="vault-door">
+          <div class="vault-dial">
+            <div class="vault-dial-center" id="vault-dial-center">🔒</div>
+          </div>
+          <div class="vault-instruction">click the dial 3 times to crack it</div>
+        </div>
+        <div class="vault-contents" id="vault-contents"></div>
+      </div>
+    </section>
+
+    <!-- ============== SECTION 9 : YEARBOOK ============== -->
+    <section class="sect" id="sect-yearbook">
+      <h2 class="sect-title"><span class="sect-num">EXHIBIT 09</span>THE YEARBOOK PAGE</h2>
+      <p class="sect-sub">Signed, sealed, never delivered. Until now.</p>
+      <div id="yearbook-page" class="yearbook-page"></div>
+    </section>
+
+    <!-- ============== SECTION 10 : ROAST ============== -->
+    <section class="sect" id="sect-roast">
+      <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 10</span>THE BIRTHDAY ROAST</h2>
+      <p class="sect-sub sect-sub-light">A friendly, lovingly unfair trial.</p>
+      <div id="roast-list" class="roast-list"></div>
+    </section>
+
+    <!-- ============== FINAL : THE REAL MESSAGE ============== -->
+    <section class="sect" id="sect-final">
+      <div class="final-bg"></div>
+      <div id="final-Photos" class="final-Photos"></div>
+      <div class="final-evidence" id="final-evidence">
+        <div class="final-evidence-label">One Last Piece Of Evidence...</div>
+        <div class="final-evidence-video" id="final-evidence-video"></div>
+      </div>
+      <div class="final-message" id="final-message">
+        <p>Behind every photo, every joke, every memory, and every adventure&nbsp;—</p>
+        <p>is a friendship I genuinely value.</p>
+        <p>Thank you for being part of some of my favourite memories.</p>
+        <p>Thank you for being you.</p>
+        <p>Here's to many more adventures, laughs, and stories we haven't created yet.</p>
+        <p class="final-line-big">Happy Birthday, Vinayak Bhutra. 🎂❤️</p>
+      </div>
+      <button id="replay-btn" class="enter-btn">REOPEN THE FILE ↺</button>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-card">
+      <button id="lightbox-close" class="lightbox-close">✕</button>
+      <div class="lightbox-photo-wrap"></div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-story" id="lightbox-story"></div>
     </div>
-  </section>
-
-  <!-- ============== SECTION 9 : YEARBOOK ============== -->
-  <section class="sect" id="sect-yearbook">
-    <h2 class="sect-title"><span class="sect-num">EXHIBIT 09</span>THE YEARBOOK PAGE</h2>
-    <p class="sect-sub">Signed, sealed, never delivered. Until now.</p>
-    <div id="yearbook-page" class="yearbook-page"></div>
-  </section>
-
-  <!-- ============== SECTION 10 : ROAST ============== -->
-  <section class="sect" id="sect-roast">
-    <h2 class="sect-title sect-title-light"><span class="sect-num">EXHIBIT 10</span>THE BIRTHDAY ROAST</h2>
-    <p class="sect-sub sect-sub-light">A friendly, lovingly unfair trial.</p>
-    <div id="roast-list" class="roast-list"></div>
-  </section>
-
-  <!-- ============== FINAL : THE REAL MESSAGE ============== -->
-  <section class="sect" id="sect-final">
-    <div class="final-bg"></div>
-    <div id="final-photos" class="final-photos"></div>
-    <div class="final-evidence" id="final-evidence">
-      <div class="final-evidence-label">One Last Piece Of Evidence...</div>
-      <div class="final-evidence-video" id="final-evidence-video"></div>
-    </div>
-    <div class="final-message" id="final-message">
-      <p>Behind every photo, every joke, every memory, and every adventure&nbsp;—</p>
-      <p>is a friendship I genuinely value.</p>
-      <p>Thank you for being part of some of my favourite memories.</p>
-      <p>Thank you for being you.</p>
-      <p>Here's to many more adventures, laughs, and stories we haven't created yet.</p>
-      <p class="final-line-big">Happy Birthday, Vinayak Bhutra. 🎂❤️</p>
-    </div>
-    <button id="replay-btn" class="enter-btn">REOPEN THE FILE ↺</button>
-  </section>
-
-</main>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <div class="lightbox-card">
-    <button id="lightbox-close" class="lightbox-close">✕</button>
-    <div class="lightbox-photo-wrap"></div>
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-    <div class="lightbox-story" id="lightbox-story"></div>
   </div>
-</div>
 
-<!-- Flash overlay for camera shutter -->
-<div id="flash-overlay"></div>
+  <!-- Flash overlay for camera shutter -->
+  <div id="flash-overlay"></div>
 
-<script src="config.js"></script>
-<script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
